@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modify-main.css">
+    <title>Document</title>
+    <style>
+        #div1, #div2, #div3, #div4, #div5, #div6, #div7 {
+            margin: 15px 0px 15px 20px;
+        }
+
+        #d-no, #d-name, #d-tel, #d-addr, #d-paym, #d-status, #d-msg {
+            font-size: 18px;
+        }
+
+        #div1, #div2, #div5, #div6 {
+            width: 220px;
+        }
+
+        #div3 {
+            width: 350px;
+        }
+
+        #div4 {
+            width: 600px;
+            height: 60px;
+        }
+
+        #div7 {
+            width: 800px;
+        }
+
+        #sec1, #sec2, #sec3, #sec4, #sec5, #sec6, #sec7 {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="nav-toggle">
+    <div class="sidebar">
+        <!-- <img src="../image/img.png" width="250px" height="250px" style="margin-left: 50px;"> -->
+        <div class="sidebar-brand">
+            <h2>택배 관리 시스템</h2>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li> 
+                    <a href="./index.html"><span class="las la-clipboard-list"></span>
+                        <span>배송 현황</span></a>
+                </li>
+                <li> 
+                    <a href="./add.html"><span class="las la-clipboard-list"></span>
+                        <span>새 등록</span></a>
+                </li>
+                <li> 
+                    <a href="./modify-main.html" class="active"><span class="las la-clipboard-list"></span>
+                        <span>수정 및 삭제</span></a>
+                </li>
+                <li> 
+                    <a href="./detail.html"><span class="las la-clipboard-list"></span>
+                        <span>상세 조회</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                배송 목록
+            </h2>
+            <div class="user-wrapper">
+                    <img src="https://www.ncloud.com/public/img/logo-m.png" width="65%" alt="네이버클라우드" style="float:left">
+            </div>
+        </header>
+
+        <main>
+            <div class="card" style="margin-right: 400px;">
+                <div class="card-header">
+                    <h3>수정 하기</h3>
+                    <div>
+                        <button id="update-btn" class="las la-arrow-right" style="height: 50px; font-size: 20px;">변경</button>
+                        <button id="delete-btn" class="las la-arrow-right" style="height: 50px; font-size: 20px;">삭제</button>
+                    </div>
+                </div>
+                <form class="row g-3">
+                    <table width="100%">
+                        <form class="row g-3">
+                            <section id="sec1">
+                                <div class="input-group flex-nowrap" id="div1">
+                                  <span class="input-group-text">번호</span>
+                                  <input type="text" name="no"  id="d-no" class="form-control" readonly>
+                                </div>
+                            </section>
+
+                            <section id="sec2">
+                                <div class="input-group flex-nowrap" id="div3">
+                                    <span class="input-group-text">운송장 번호</span>
+                                    <input type="text" name="trackingNo" id="d-trackingNo" class="form-control">
+                                </div>
+                                </section>
+                            
+                            <section id="sec3">
+                            <div class="input-group flex-nowrap" id="div2">
+                                <span class="input-group-text">이름</span>
+                                <input type="text" name="name "id="d-name" class="form-control">
+                            </div>
+                            </section><br>
+                            
+                            <section id="sec4">
+                            <div class="input-group flex-nowrap" id="div3">
+                                <span class="input-group-text">전화번호</span>
+                                <input type="tel" name="tel" id="d-tel" class="form-control">
+                            </div>
+                            </section>
+                            
+                            <section id="sec5">
+                            <div class="input-group flex-nowrap" id="div4">
+                                <span class="input-group-text">주소</span>
+                                <input type="text" name="addr" id="d-addr" class="form-control">
+                            </div>
+                            </section>
+                            
+                            <section id="sec6">
+                            <div class="input-group flex-nowrap" id="div5">
+                                <span class="input-group-text">결제 방식</span>
+                                <select name="paym" id="d-paym" class="form-control">
+                                <option value="0">무료배송</option>
+                                <option value="1">선불</option>
+                                <option value="2">착불</option>
+                                </select>
+                            </div>
+                            </section>
+                            
+                            <section id="sec7">
+                            <div class="input-group flex-nowrap" id="div6">
+                                <span class="input-group-text">배송 상태</span>
+                                <input type="text" name="status" id="d-status" class="form-control">
+                            </div>
+                            </section>
+                            
+                            <section id="sec8">
+                            <div class="input-group flex-nowrap" id="div7">
+                                <span class="input-group-text">배송 메세지</span>
+                                <input type="text" name="msg" id="d-msg" class="form-control">
+                            </div>
+                            </section>
+
+                        </form>
+                        <tbody id="index1">
+                            
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </main>
+    </div>
+
+</body>
+<script src="./js/modify.js"></script>
+</html>

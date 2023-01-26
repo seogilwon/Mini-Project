@@ -1,0 +1,22 @@
+#box1, #box2, #box3, #box4, #box5, #box6, #box7 {
+margin: 20px
+};
+
+#box4 {
+width: 800px;
+height: 80px;
+}
+
+#box5, #box6 {
+  display: inline-block;
+}
+
+#d-addr {
+width: 800px;
+height: 80px;
+}
+
+#d-msg {
+width: 400px;
+height: 100px;
+}
